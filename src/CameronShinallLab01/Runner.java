@@ -3,19 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package emptyjavaproject;
+package CameronShinallLab01;
+
+import java.util.Scanner;
 
 /**
  *
  * @author paul.kline
  */
-public class Main {
+public class Runner {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Die roll = new Die();
+        Scanner input = new Scanner(System.in);
+        System.out.print("How often should I print? ");
+        int rolls = input.nextInt();
+        roll.roll(rolls);
     }
-    
+
 }
