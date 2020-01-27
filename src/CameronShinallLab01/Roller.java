@@ -11,20 +11,30 @@ package CameronShinallLab01;
  */
 public class Roller {
 
-    public void rolled(int[] counted, int rolls, int range) {
+    public void rolled(int[] counted, int rolls, int range, int sides) {
         Die checkRoll = new Die();
         System.out.println("After " + rolls + " rolls, the distribution is:");
         if (range == 1) {
-            for (int i = 0; i < counted.length; i++) {
-                System.out.println((i + 1) + " was rolled " + counted[i] + " times.");
-
+            for (int i = 1; i <= sides; i++) {
+                System.out.print(i + "\t");
             }
+            System.out.println();
+            for (int i = 0; i < counted.length; i++) {
+                System.out.print(counted[i] + "\t");
+            }
+            System.out.println();
         } else if (range == 2) {
             int index = 0;
+            sides = sides*2;
+            for (int i = 2; i <= sides; i++) {
+                System.out.print(i + "\t");
+            }
+            System.out.println();
             for (int i = 1; i < counted.length; i++) {                
-                    System.out.println((i + 1) + " was rolled " + counted[index] + " times.");
+                    System.out.print(counted[index] + "\t");
                     index++;
             }
+            System.out.println();
         }
     }
 }

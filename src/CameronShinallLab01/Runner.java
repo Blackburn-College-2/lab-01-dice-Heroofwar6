@@ -20,11 +20,13 @@ public class Runner {
         // TODO code application logic here
         Die roll = new Die();
         Scanner input = new Scanner(System.in);
-        System.out.print("How many dice do you want to roll (1 or 2)?");
+        System.out.print("How many dice do you want to roll (1 or 2)? ");
         int diceAmount = input.nextInt();
         System.out.print("How often should I print? ");
         int rolls = input.nextInt();
-        roll.roll(rolls, diceAmount);
+        System.out.print("How many sides does the die or dice have? ");
+        int diceSides = input.nextInt();
+        roll.roll(rolls, diceAmount, diceSides);
     }
 
 }
